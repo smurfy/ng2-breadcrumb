@@ -1,26 +1,19 @@
 {
     "compilerOptions": {
-        "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
+        "target": "es5",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "sourceMap": true,
-        "noEmitHelpers": true,
-        "noImplicitAny": true,
-        "declaration": false,
-        "lib": ["dom", "es6"],
-        "types": [
-            "jasmine",
-            "node",
-            "webpack"
-        ]
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "declaration": true
     },
     "exclude": [
-        "node_modules", "bundles", "dist"
-    ],
-    "files": [
-        "./ng2-breadcrumb.ts"
-    ],
-    "atom": { "rewriteTsconfig": false }
+        "typings/main",
+        "typings/main.d.ts",
+        "node_modules",
+        "bundles",
+        "dist"
+    ]
 }
