@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
-import {FORM_DIRECTIVES} from '@angular/common';
-import {ROUTER_DIRECTIVES, Router, NavigationEnd} from '@angular/router';
-import {BreadcrumbService} from './breadcrumbService';
+import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { BreadcrumbService } from './breadcrumb.service';
 
 /**
  * This component shows a breadcrumb trail for available routes the router can navigate to.
@@ -9,7 +8,6 @@ import {BreadcrumbService} from './breadcrumbService';
  */
 @Component({
     selector: 'breadcrumb',
-    directives: [FORM_DIRECTIVES, ROUTER_DIRECTIVES],
     template: `
         <div>
             <ul class="breadcrumb">
@@ -47,7 +45,7 @@ export class BreadcrumbComponent {
 
     constructor(private router: Router, private breadcrumbService: BreadcrumbService) {
         this._urls = new Array();
-        this.router.events.subscribe((navigationEnd:NavigationEnd) => {
+        this.router.events.subscribe((navigationEnd: NavigationEnd) => {
             this._urls.length = 0; //Fastest way to clear out array
             this.generateBreadcrumbTrail(navigationEnd.urlAfterRedirects ? navigationEnd.urlAfterRedirects : navigationEnd.url);
         });

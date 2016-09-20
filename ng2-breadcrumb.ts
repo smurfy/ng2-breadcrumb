@@ -1,2 +1,3 @@
-export {BreadcrumbComponent} from './src/breadcrumb/breadcrumb';
-export {BreadcrumbService} from './src/breadcrumb/breadcrumbService';
+export * from './src/breadcrumb/breadcrumb.component';
+export * from './src/breadcrumb/breadcrumb.service';
+export { BreadcrumbModule } from './src/breadcrumb/breadcrumb.module';
