@@ -6,7 +6,7 @@ var PATHS = {
 
 gulp.task('clean', function (done) {
     var del = require('del');
-    del(['dist'], done);
+    del(['dist', 'bundles', 'ng2-breadcrumb.d.ts', 'ng2-breadcrumb.js', 'src/breadcrumb/breadcrumb.*.d.ts', 'src/breadcrumb/breadcrumb.*.js'], done);
 });
 
 gulp.task('build', function () {

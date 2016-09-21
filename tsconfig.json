@@ -1,19 +1,20 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es5",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "inlineSourceMap": true,
-        "inlineSources": true,
-        "declaration": true
-    },
-    "exclude": [
-        "typings/main",
-        "typings/main.d.ts",
-        "node_modules",
-        "bundles",
-        "dist"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "declaration": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "bundles",
+    "dist"
+  ],
+  "files": [
+    "./ng2-breadcrumb.ts"
+  ]
 }
